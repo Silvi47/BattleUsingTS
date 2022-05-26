@@ -34,10 +34,4 @@ export default function Card({
   );
 }
 
-Card.propTypes = {
-  header: PropTypes.string.isRequired,
-  subheader: PropTypes.string,
-  avatar: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-};
+
