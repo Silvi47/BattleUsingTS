@@ -12,11 +12,6 @@ const styles = {
   } as CSSProperties,
 };
 
-const load = {
-  text: "Apple",
-  speed: 300
-};
-
 export default function Loading(loading: { text: string }, { speed: integer}) {
   const [content, setContent] = React.useState(text);
 
