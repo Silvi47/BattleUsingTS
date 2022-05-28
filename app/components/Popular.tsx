@@ -156,7 +156,7 @@ export default function Popular() {
         onUpdateLanguage={setSelectedLanguage}
       />
 
-      {isLoading() && <Loading text="Fetching Repos" />}
+      {isLoading() && <Loading text="Fetching Repos" speed={300} />}
 
       {state.error && <p className="center-text error">{state.error}</p>}
 
