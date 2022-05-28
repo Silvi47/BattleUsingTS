@@ -12,18 +12,23 @@ const styles = {
   } as CSSProperties,
 };
 
-export default function Loading(loading: { text: string }, { speed: integer}) {
+type Load = {
+  text: string,
+  speed: integer
+}
+
+export default function Loading({ text, speed }: Load) {
   const [content, setContent] = React.useState(text);
 
   React.useEffect(() => {
     const id = window.setInterval(() => {
       setContent((content) => {
-        return content === `${loading.text}...` ? loading.text : `${content}.`;
+        return content === `${text}...` ? text : `${content}.`;
       });
-    }, loading.speed);
+    }, speed);
 
     return () => window.clearInterval(id);
-  }, [loading.text, loading.speed]);
+  }, [text, speed]);
 
   return <p style={styles.content}>{content}</p>;
 }
