@@ -105,7 +105,7 @@ export default function Results({
   const { winner, loser, error, loading } = state;
 
   if (loading === true || !winner || !loser) {
-    return <Loading text="Battling" speed="300" />;
+    return <Loading text="Battling" speed={300} />;
   }
 
   if (error) {
