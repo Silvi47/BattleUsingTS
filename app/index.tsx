@@ -21,7 +21,7 @@ function App () {
           <div className='container'>
             <Nav toggleTheme={toggleTheme} />
 
-            <React.Suspense fallback={<Loading />} >
+            <React.Suspense fallback={<Loading text="Loading" speed={300} />} >
               <Switch>
                 <Route exact path='/' component={Popular} />
                 <Route exact path='/battle' component={Battle} />
